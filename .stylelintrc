@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "plugins": [],
+  "rules": {
+    "selector-pseudo-element-colon-notation": "double",
+    "declaration-block-no-redundant-longhand-properties": [true, {
+      ignoreShorthands: ["flex-flow", "grid-gap"]
+    }]
+  }
+}
