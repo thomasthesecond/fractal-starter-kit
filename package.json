@@ -1,0 +1,77 @@
+{
+  "name": "fractal-starter-kit",
+  "title": "Fractal Starter Kit",
+  "version": "1.0.0-beta",
+  "description": "",
+  "keywords": [
+    "styleguide"
+  ],
+  "main": "fractal.js",
+  "scripts": {
+    "start": "fractal start --sync",
+    "assets": "webpack --watch",
+    "build": "yarn run clean && webpack && fractal build",
+    "clean": "rimraf tmp && rimraf www",
+    "eslint": "eslint src --ext .js",
+    "stylelint": "stylelint src/**/*.css",
+    "lint": "yarn run eslint && yarn run stylelint",
+    "gh-pages": "yarn run build && gh-pages -d www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomasthesecond/fractal-starter-kit.git"
+  },
+  "author": "Thomas Cunningham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomasthesecond/fractal-starter-kit/issues"
+  },
+  "homepage": "https://github.com/thomasthesecond/fractal-starter-kit#readme",
+  "theme": {
+    "format": "json",
+    "skin": "navy"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@frctl/fractal": "^1.1.5",
+    "@frctl/mandelbrot": "^1.2.0",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.3",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "color": "^2.0.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "gh-pages": "^1.0.0",
+    "handlebars-loader": "^1.6.0",
+    "postcss": "^6.0.10",
+    "postcss-calc": "^6.0.0",
+    "postcss-cli": "^4.1.0",
+    "postcss-custom-properties": "^6.1.0",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-map": "^0.9.0",
+    "postcss-media-minmax": "^3.0.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-simple-vars": "^4.1.0",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.18.2",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "webpack": "^3.5.5"
+  }
+}
